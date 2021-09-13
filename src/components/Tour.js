@@ -1,16 +1,18 @@
 import React from 'react'
 
-function Tour(place, removeItem) {
+function Tour({place, deletePlace}) {
+  const {id, image, name, info, price} = place;
+  // console.log(place)
   return (
     <div className="tour">
-      <img src={place.image} alt={place.name} />
+      <img src={image} alt={name} />
       <div className="content">
-        <h4>{place.name}</h4>
-        <p>{place.info}</p>
-        <h5>${place.price}</h5>
+        <h4>{name}</h4>
+        <p>{info}</p>
+        <h5>${price}</h5>
       </div>
       <div className="btnContainer">
-        <button onClick={() => removeItem(place.id)}>Not Interested</button>
+        <button onClick={() => {deletePlace(id)}}>Not Interested</button>
       </div>
     </div>
   )

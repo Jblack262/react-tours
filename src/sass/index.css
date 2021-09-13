@@ -262,7 +262,8 @@ input[type=button] {
 }
 
 .tour {
-  max-width: 40vw;
+  width: 768px;
+  max-width: 90%;
   margin: 2rem auto;
   background: #102941;
   border-radius: 1rem;
