@@ -2,6 +2,8 @@
 @use './themes/defaultTheme';
 @use './util/mixins';
 @use './util/variables';
+@use './pages/error';
+@use './pages/loading';
 @use 'base/global';
 @use 'base/index';
 @use 'base/reset';

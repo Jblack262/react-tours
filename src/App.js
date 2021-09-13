@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Tour from './components/Tour';
+import Error from './components/pages/Error';
+import Loading from './components/pages/Loading';
 
 const url = "https://course-api.com/react-tours-project";
 
@@ -40,10 +42,10 @@ function App() {
   return (
     <div className="App">
       {isLoading && (
-        <h1>LOADING</h1>
+        <Loading />
       )}
       {isError && (
-        <h1>THERE HAS BEEN A BREACH</h1>
+        <Error />
       )}
       {places.map((place) => {
         // console.log(place)
